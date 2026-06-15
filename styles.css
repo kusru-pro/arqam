@@ -1,0 +1,54 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation for dynamic content */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Toast slide-in animation */
+.toast-enter {
+    animation: slideInRight 0.3s forwards;
+}
+.toast-exit {
+    animation: fadeOut 0.3s forwards;
+}
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Global Hover Effect: Soft brown shade with white inner gap */
+button:hover,
+.cursor-pointer:hover {
+    outline: none !important;
+    /* Creates the white color gap, followed by a soft brown shade (shadow) all around */
+    box-shadow: 0 0 0 2px #ffffff, 0 0 15px 5px rgba(139, 69, 19, 0.3) !important;
+    border-radius: inherit;
+    transition: all 0.2s ease-in-out;
+}
