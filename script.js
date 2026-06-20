@@ -68,7 +68,7 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
             { id: 28, title: "The Sun and Her Flowers", author: "Rupi Kaur", category: "Poem", review: "A vibrant and transcendent journey about growth and healing.", cover: "https://placehold.co/500x500/fbbf24/ffffff?text=Sun+Flowers" },
             { id: 29, title: "Slouching Towards Bethlehem", author: "Joan Didion", category: "Essay", review: "An essential collection of essays exploring the mood of America in the 1960s.", cover: "https://placehold.co/500x500/94a3b8/ffffff?text=Slouching" },
             { id: 30, title: "Tenth of December", author: "George Saunders", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" },
-            { id: 30, title: "abc", author: "abc", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" }
+            { id: 31, title: "abc", author: "abc", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" }
         ]
     }
 };
