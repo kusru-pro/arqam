@@ -4,7 +4,7 @@ const state = {
     activeLibraryCategory: 'All', // Added category state
     data: {
         news: [
-            { id: 1, title: "📰 ക്ലാസ്സിൽ  ലൈബ്രെറിക്ക് തുടക്കം ", author: "arqam corner", date: "june 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു ", icon: "fa-trophy", color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
+            { id: 1, title: "📰 ക്ലാസ്സിൽ  ലൈബ്രെറിക്ക് തുടക്കം ", author: "arqam corner", date: "june 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു ", color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
             { id: 2, title: "🇺🇸 🇮🇷 Latest News: United States and Iran (June 12, 2026)", author: "Librarian", date: "June 8, 2026", desc: `Tensions between the United States and Iran remain high after several days of military exchanges in the Gulf region. Iran has warned that any new U.S. attack would receive a "severe response," while diplomatic efforts to stop further escalation are continuing.
 
 Recent developments include:
