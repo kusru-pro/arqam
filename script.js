@@ -4,7 +4,7 @@ const state = {
     activeLibraryCategory: 'All', // Added category state
     data: {
         news: [
-            { id: 1, title: "Arqam Hackathon 2026 Winners Announced", author: "Admin", date: "June 10, 2026", desc: "നൂതനമായ പഠന ആപ്പ് ഉപയോഗിച്ച് ഈ വർഷത്തെ വാർഷിക ഹാക്കത്തോൺ നേടിയ 'കോഡ്ക്രാഫ്റ്റേഴ്‌സ്' ടീമിന് അഭിനന്ദനങ്ങൾ.", icon: "fa-trophy", color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
+            { id: 1, title: "ക്ലാസ്സിൽ  ലൈബ്രെറിക്ക് തുടക്കം ", author: "arqam corner", date: "june 19", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു ", icon: "fa-trophy", color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
             { id: 2, title: "🇺🇸 🇮🇷 Latest News: United States and Iran (June 12, 2026)", author: "Librarian", date: "June 8, 2026", desc: `Tensions between the United States and Iran remain high after several days of military exchanges in the Gulf region. Iran has warned that any new U.S. attack would receive a "severe response," while diplomatic efforts to stop further escalation are continuing.
 
 Recent developments include:
@@ -67,7 +67,8 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
             { id: 27, title: "The Wright Brothers", author: "David McCullough", category: "Non-Fiction", review: "The dramatic story-behind-the-story about the courageous brothers who taught the world how to fly.", cover: "https://placehold.co/500x500/3b82f6/ffffff?text=Wright+Bros" },
             { id: 28, title: "The Sun and Her Flowers", author: "Rupi Kaur", category: "Poem", review: "A vibrant and transcendent journey about growth and healing.", cover: "https://placehold.co/500x500/fbbf24/ffffff?text=Sun+Flowers" },
             { id: 29, title: "Slouching Towards Bethlehem", author: "Joan Didion", category: "Essay", review: "An essential collection of essays exploring the mood of America in the 1960s.", cover: "https://placehold.co/500x500/94a3b8/ffffff?text=Slouching" },
-            { id: 30, title: "Tenth of December", author: "George Saunders", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" }
+            { id: 30, title: "Tenth of December", author: "George Saunders", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" },
+            { id: 30, title: "abc", author: "abc", category: "Story", review: "A brilliant collection of short stories touching on the human condition.", cover: "https://placehold.co/500x500/a855f7/ffffff?text=Tenth+of+Dec" }
         ]
     }
 };
