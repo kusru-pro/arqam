@@ -34,8 +34,8 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
 സത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics" }
         ],
         magazines: [
-            { id: 1, title: "ഓർബിസ് ", author: "Arqam unit", issue: "sep 2025", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
-            { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
+            { id: 1, title: "ഓർബിസ് ", author: "Arqam unit", issue: "sep 2025", cover: "https://i.pinimg.com/736x/8b/2a/64/8b2a640d8d4e7f1691ce2540cc16b9d0.jpg", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
+            { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "blob:https://in.pinterest.com/23008812-a5a4-4245-8a70-6ef335ef32a5", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
         ],
         library: [
             { id: 1, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", category: "Non-Fiction", review: "An enthralling and thought-provoking look at the history of our species.", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing" },
