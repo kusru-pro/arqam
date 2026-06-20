@@ -34,9 +34,8 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
 സത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics" }
         ],
         magazines: [
-            { id: 1, title: "The Chronicle - Spring '26", author: "Editorial Board", issue: "Issue #42", cover: "https://placehold.co/500x500/1e3a8a/ffffff?text=Chronicle+Spring+26", pdf: "https://drive.google.com/file/d/1NufnBJnnKLKfmTTyTDdyoQFm8L14fFS2/view?usp=drive_link" },
-            { id: 2, title: "Tech Innovators Monthly", author: "Engineering Dept", issue: "May 2026", cover: "https://placehold.co/500x500/10b981/ffffff?text=Tech+Innovators", pdf: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
-            { id: 3, title: "Tech Idfhdfdfh", author: "Engdfhring Dept", issue: "May 2026", cover: "https://placehold.co/500x500/10b981/ffffff?text=Tech+Innovators", pdf: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" },
+            { id: 1, title: "ഓർബിസ് ", author: "Arqam unit", issue: "sep 2025", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
+            { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
         ],
         library: [
             { id: 1, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", category: "Non-Fiction", review: "An enthralling and thought-provoking look at the history of our species.", cover: "https://placehold.co/500x500/ef4444/ffffff?text=Sapiens" },
