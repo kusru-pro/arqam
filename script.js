@@ -21,7 +21,7 @@ A major talking point has been the presence of empty seats at some matches, with
 
 For Indian viewers, World Cup matches can be watched on Zee's sports channels and streamed on Zee5, while selected matches are available free on DD Sports.`, icon: "fa-microphone-alt", color: "text-purple-500", bg: "bg-purple-50", image: "https://library.sportingnews.com/styles/twitter_card_120x120/s3/2025-11/World-Cup-2026-umbrella-FTR-%281%29.jpg?itok=EmUuGN-R" }
         ],
-        articles: [
+      literaryworks: [
             { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.
 
 ഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.
