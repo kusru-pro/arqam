@@ -141,7 +141,7 @@
                 <i class="fas fa-newspaper"></i> News
             </button>
             <button class="tab-btn flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700" data-tab="articles" onclick="switchTab('articles')">
-                <i class="fas fa-file-alt"></i> Articles
+                <i class="fas fa-file-alt"></i> literary works
             </button>
             <button class="tab-btn flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700" data-tab="magazines" onclick="switchTab('magazines')">
                 <i class="fas fa-book-open"></i> Magazines
@@ -189,7 +189,7 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Resource Type</label>
                         <select id="resource-type" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition bg-white">
                             <option value="news">News / Announcement</option>
-                            <option value="articles">Article / Essay</option>
+                            <option value="literary works">Article / Essay</option>
                             <option value="magazines">Magazine Issue</option>
                             <option value="library">Library Book (PDF)</option>
                         </select>
@@ -216,7 +216,7 @@
                         <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-50 transition cursor-pointer" onclick="document.getElementById('file-input').click()">
                             <i class="fas fa-file-upload text-3xl text-gray-400 mb-2"></i>
                             <p class="text-sm text-gray-500"><span class="text-primary-600 font-medium">Click to browse</span> or drag and drop</p>
-                            <p class="text-xs text-gray-400 mt-1">PDF, DOCX, or JPG (Max 100MB)</p>
+                            <p class="text-xs text-gray-400 mt-1">PDF, DOCX, or JPG (Max 500MB)</p>
                         </div>
                         <!-- Hidden actual file input -->
                         <input type="file" id="file-input" class="hidden" onchange="updateFileName(this)">
@@ -288,7 +288,7 @@
                     <i class="fas fa-newspaper w-5"></i> News
                 </button>
                 <button onclick="switchTab('articles'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
-                    <i class="fas fa-file-alt w-5"></i> Articles
+                    <i class="fas fa-file-alt w-5"></i> literary works
                 </button>
                 <button onclick="switchTab('magazines'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
                     <i class="fas fa-book-open w-5"></i> Magazines
@@ -333,7 +333,7 @@ A major talking point has been the presence of empty seats at some matches, with
 
 For Indian viewers, World Cup matches can be watched on Zee's sports channels and streamed on Zee5, while selected matches are available free on DD Sports.`, icon: "fa-microphone-alt", color: "text-purple-500", bg: "bg-purple-50", image: "https://library.sportingnews.com/styles/twitter_card_120x120/s3/2025-11/World-Cup-2026-umbrella-FTR-%281%29.jpg?itok=EmUuGN-R" }
                 ],
-                articles: [
+                literaryworks: [
                     { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.
 
 ഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.
