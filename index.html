@@ -125,8 +125,7 @@
                     Dive into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary">ArQamize</span>
                 </h1>
                 <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-10 font-light">
-                    ARQAM is a student development unit that enhances students' skills through learning and knowledge-sharing activities. It provides access to articles, magazines, library resources, and news updates, helping students grow academically and stay informed.
-
+                    ARQAM is a student development unit that enhances students' skills through learning and knowledge-sharing activities. It provides access to literary works, magazines, library resources, and news updates, helping students grow academically and stay informed.
                 </p>
             </div>
         </div>
@@ -140,8 +139,8 @@
             <button class="tab-btn active flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 bg-primary-50 text-primary-700" data-tab="news" onclick="switchTab('news')">
                 <i class="fas fa-newspaper"></i> News
             </button>
-            <button class="tab-btn flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700" data-tab="articles" onclick="switchTab('articles')">
-                <i class="fas fa-file-alt"></i> literary works
+            <button class="tab-btn flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700" data-tab="literary_works" onclick="switchTab('literary_works')">
+                <i class="fas fa-file-alt"></i> Literary Works
             </button>
             <button class="tab-btn flex-1 sm:flex-none px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700" data-tab="magazines" onclick="switchTab('magazines')">
                 <i class="fas fa-book-open"></i> Magazines
@@ -189,7 +188,7 @@
                         <label class="block text-sm font-medium text-gray-700 mb-1">Resource Type</label>
                         <select id="resource-type" required class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition bg-white">
                             <option value="news">News / Announcement</option>
-                            <option value="literary works">Article / Essay</option>
+                            <option value="literary_works">Literary Work / Essay</option>
                             <option value="magazines">Magazine Issue</option>
                             <option value="library">Library Book (PDF)</option>
                         </select>
@@ -261,14 +260,14 @@
         </div>
     </div>
 
-    <!-- Article Details Modal -->
-    <div id="article-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden flex items-center justify-center backdrop-blur-sm px-4" onclick="if(event.target === this) closeArticleModal()">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 relative flex flex-col max-h-[90vh]" id="article-modal-content">
+    <!-- Literary Work Details Modal -->
+    <div id="literary-work-modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden flex items-center justify-center backdrop-blur-sm px-4" onclick="if(event.target === this) closeLiteraryWorkModal()">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 relative flex flex-col max-h-[90vh]" id="literary-work-modal-content">
             <!-- Close button -->
-            <button onclick="closeArticleModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-500 rounded-full transition-colors z-10 focus:outline-none">
+            <button onclick="closeLiteraryWorkModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-red-100 text-gray-500 hover:text-red-500 rounded-full transition-colors z-10 focus:outline-none">
                 <i class="fas fa-times"></i>
             </button>
-            <div id="article-modal-body" class="p-6 sm:p-10 overflow-y-auto custom-scrollbar flex-grow">
+            <div id="literary-work-modal-body" class="p-6 sm:p-10 overflow-y-auto custom-scrollbar flex-grow">
                 <!-- Content injected via JS -->
             </div>
         </div>
@@ -287,8 +286,8 @@
                 <button onclick="switchTab('news'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
                     <i class="fas fa-newspaper w-5"></i> News
                 </button>
-                <button onclick="switchTab('articles'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
-                    <i class="fas fa-file-alt w-5"></i> literary works
+                <button onclick="switchTab('literary_works'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
+                    <i class="fas fa-file-alt w-5"></i> Literary Works
                 </button>
                 <button onclick="switchTab('magazines'); toggleMobileMenu();" class="flex items-center gap-3 w-full px-4 py-3 text-left rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition font-medium">
                     <i class="fas fa-book-open w-5"></i> Magazines
@@ -316,39 +315,16 @@
             activeLibraryCategory: 'All', // Added category state
             data: {
                 news: [
-                    { id: 1, title: "📰 ക്ലാസ്സിൽ  ലൈബ്രെറിക്ക് തുടക്കം", author: "Arqam corner", date: "June 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു ",  color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
-                    { id: 2, title: "🇺🇸 🇮🇷 Latest News: United States and Iran (June 12, 2026)", author: "Librarian", date: "June 8, 2026", desc: `Tensions between the United States and Iran remain high after several days of military exchanges in the Gulf region. Iran has warned that any new U.S. attack would receive a "severe response," while diplomatic efforts to stop further escalation are continuing.
-
-Recent developments include:
-
-The U.S. and Iran have exchanged strikes in the region, raising concerns about a wider conflict.
-Reports from Reuters and AP indicate that negotiators are discussing a possible memorandum to halt the fighting and maintain a ceasefire.
-However, Iranian officials have said that no final agreement has yet been approved, suggesting negotiations are still ongoing.
-The United Nations has called for both sides to return fully to the ceasefire and avoid further escalation.`, color: "text-blue-500", bg: "bg-blue-50", image: "https://media.assettype.com/theleaflet/2025-06-28/jsewqdw5/US-Iran.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" },
-                    { id: 3, title: "📰 World Cup 2026 Latest News (June 12, 2026)", author: "arqam unit", date: "June 5, 2026", desc: `The 2026 FIFA World Cup has officially started in North America, co-hosted by Mexico, United States, and Canada. This is the largest World Cup ever, featuring 48 teams and 104 matches.
-
-In the opening match, Mexico defeated South Africa 2–0 in front of more than 80,000 fans at Estadio Azteca.
-South Korea came from behind to beat Czech Republic 2–1 in another opening-day match.
-A major talking point has been the presence of empty seats at some matches, with fans and supporter groups criticizing high ticket prices. FIFA says overall demand remains strong.
-
-For Indian viewers, World Cup matches can be watched on Zee's sports channels and streamed on Zee5, while selected matches are available free on DD Sports.`, icon: "fa-microphone-alt", color: "text-purple-500", bg: "bg-purple-50", image: "https://library.sportingnews.com/styles/twitter_card_120x120/s3/2025-11/World-Cup-2026-umbrella-FTR-%281%29.jpg?itok=EmUuGN-R" }
+                    { id: 1, title: "📰 ക്ലാസ്സിൽ ലൈബ്രെറിക്ക് തുടക്കം", author: "Arqam corner", date: "June 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു ",  color: "text-yellow-500", bg: "bg-yellow-50", image: "https://placehold.co/600x300/f59e0b/ffffff?text=Hackathon+Winners" },
+                    { id: 2, title: "🇺🇸 🇮🇷 Latest News: United States and Iran (June 12, 2026)", author: "Librarian", date: "June 8, 2026", desc: `Tensions between the United States and Iran remain high after several days of military exchanges in the Gulf region. Iran has warned that any new U.S. attack would receive a "severe response," while diplomatic efforts to stop further escalation are continuing.\n\nRecent developments include:\n\nThe U.S. and Iran have exchanged strikes in the region, raising concerns about a wider conflict.\nReports from Reuters and AP indicate that negotiators are discussing a possible memorandum to halt the fighting and maintain a ceasefire.\nHowever, Iranian officials have said that no final agreement has yet been approved, suggesting negotiations are still ongoing.\nThe United Nations has called for both sides to return fully to the ceasefire and avoid further escalation.`, color: "text-blue-500", bg: "bg-blue-50", image: "https://media.assettype.com/theleaflet/2025-06-28/jsewqdw5/US-Iran.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" },
+                    { id: 3, title: "📰 World Cup 2026 Latest News (June 12, 2026)", author: "arqam unit", date: "June 5, 2026", desc: `The 2026 FIFA World Cup has officially started in North America, co-hosted by Mexico, United States, and Canada. This is the largest World Cup ever, featuring 48 teams and 104 matches.\n\nIn the opening match, Mexico defeated South Africa 2–0 in front of more than 80,000 fans at Estadio Azteca.\nSouth Korea came from behind to beat Czech Republic 2–1 in another opening-day match.\nA major talking point has been the presence of empty seats at some matches, with fans and supporter groups criticizing high ticket prices. FIFA says overall demand remains strong.\n\nFor Indian viewers, World Cup matches can be watched on Zee's sports channels and streamed on Zee5, while selected matches are available free on DD Sports.`, icon: "fa-microphone-alt", color: "text-purple-500", bg: "bg-purple-50", image: "https://library.sportingnews.com/styles/twitter_card_120x120/s3/2025-11/World-Cup-2026-umbrella-FTR-%281%29.jpg?itok=EmUuGN-R" }
                 ],
-                literaryworks: [
-                    { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.
-
-ഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.
-
-ഇസ്ലാമിന്റെ അഞ്ച് അടിസ്ഥാന തൂണുകൾ ഷഹാദത്ത് (വിശ്വാസപ്രഖ്യാപനം), നമസ്കാരം, സകാത്ത്, റമദാൻ നോമ്പ്, ഹജ്ജ് എന്നിവയാണ്. ഈ കർമ്മങ്ങൾ മുസ്ലിംകളുടെ ആത്മീയ വളർച്ചയ്ക്കും സാമൂഹിക ഉത്തരവാദിത്തബോധത്തിനും സഹായിക്കുന്നു.
-
-ലോകമെമ്പാടുമുള്ള കോടിക്കണക്കിന് ആളുകൾ ഇസ്ലാം മതം പിന്തുടരുന്നു. സമാധാനവും ധാർമ്മികതയും മനുഷ്യസ്നേഹവും പ്രോത്സാഹിപ്പിക്കുന്ന മതമാണ് ഇസ്ലാം. മനുഷ്യരുടെ ഈ ലോകജീവിതവും പരലോക വിജയവും ലക്ഷ്യമാക്കി ഒരു സമഗ്ര ജീവിത മാർഗ്ഗമാണ് ഇസ്ലാം.
-
-ഉപസംഹാരം:
-സത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics" }
+                literary_works: [
+                    { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.\n\nഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.\n\nഇസ്ലാമിന്റെ അഞ്ച് അടിസ്ഥാന തൂണുകൾ ഷഹാദത്ത് (വിശ്വാസപ്രഖ്യാപനം), നമസ്കാരം, സകാത്ത്, റമദാൻ നോമ്പ്, ഹജ്ജ് എന്നിവയാണ്. ഈ കർമ്മങ്ങൾ മുസ്ലിംകളുടെ ആത്മീയ വളർച്ചയ്ക്കും സാമൂഹിക ഉത്തരവാദിത്തബോധത്തിനും സഹായിക്കുന്നു.\n\nലോകമെമ്പാടുമുള്ള കോടിക്കണക്കിന് ആളുകൾ ഇസ്ലാം മതം പിന്തുടരുന്നു. സമാധാനവും ധാർമ്മികതയും മനുഷ്യസ്നേഹവും പ്രോത്സാഹിപ്പിക്കുന്ന മതമാണ് ഇസ്ലാം. മനുഷ്യരുടെ ഈ ലോകജീവിതവും പരലോക വിജയവും ലക്ഷ്യമാക്കി ഒരു സമഗ്ര ജീവിത മാർഗ്ഗമാണ് ഇസ്ലാം.\n\nഉപസംഹാരം:\nസത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics" }
                 ],
                 magazines: [
-                    { id: 1, title: "ഓർബിസ് ", author: "Arqam unit", issue: "sep 2025", cover: "https://i.pinimg.com/736x/8b/2a/64/8b2a640d8d4e7f1691ce2540cc16b9d0.jpg", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
+                    { id: 1, title: "ഓർബിസ്", author: "Arqam unit", issue: "sep 2025", cover: "https://i.pinimg.com/736x/8b/2a/64/8b2a640d8d4e7f1691ce2540cc16b9d0.jpg", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
                     { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "https://i.pinimg.com/736x/c7/b4/f1/c7b4f127c878b5096c598817e3e3e369.jpg", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
-                    
                 ],
                 library: [
                     { id: 1, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", category: "Non-Fiction", review: "An enthralling and thought-provoking look at the history of our species.", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing" },
@@ -360,7 +336,7 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
                     { id: 7, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Novel", review: "A tragic story of the Jazz Age and the American Dream.", cover: "https://placehold.co/500x500/f59e0b/ffffff?text=Great+Gatsby" },
                     { id: 8, title: "Aesop's Fables", author: "Aesop", category: "Story", review: "A timeless collection of moral tales and fables.", cover: "https://placehold.co/500x500/3b82f6/ffffff?text=Aesop's+Fables" },
                     { id: 9, title: "The Diary of a Young Girl", author: "Anne Frank", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
-                    { id: 10,title: "hksdfkwyugkufyfgfyef",  author: "ameen", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
+                    { id: 10, title: "hksdfkwyugkufyfgfyef",  author: "ameen", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
                     { id: 11, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Novel", review: "A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice.", cover: "https://placehold.co/500x500/3b82f6/ffffff?text=Mockingbird" },
                     { id: 12, title: "Thinking, Fast and Slow", author: "Daniel Kahneman", category: "Non-Fiction", review: "The renowned psychologist's explanation of the two systems that drive the way we think.", cover: "https://placehold.co/500x500/10b981/ffffff?text=Thinking" },
                     { id: 13, title: "Deep Work", author: "Cal Newport", category: "Study", review: "Rules for focused success in a distracted world.", cover: "https://placehold.co/500x500/6366f1/ffffff?text=Deep+Work" },
@@ -424,16 +400,16 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
             return container;
         }
 
-        function renderArticles() {
+        function renderLiteraryWorks() {
             const container = document.createElement('div');
             container.className = 'flex flex-col gap-4 fade-in';
             
-            if(state.data.articles.length === 0) {
-                container.innerHTML = `<div class="text-center py-12 text-gray-500">No articles available.</div>`;
+            if(state.data.literary_works.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-gray-500">No literary works available.</div>`;
                 return container;
             }
 
-            state.data.articles.forEach(item => {
+            state.data.literary_works.forEach(item => {
                 container.innerHTML += `
                     <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 hover:shadow-md transition-shadow flex flex-col sm:flex-row gap-5 items-start sm:items-center">
                         <div class="flex-grow">
@@ -441,12 +417,12 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
                                 <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-2.5 py-0.5 rounded">${item.category}</span>
                                 <span class="text-gray-400 text-xs"><i class="far fa-clock"></i> ${item.readTime}</span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-1 hover:text-primary-600 cursor-pointer transition-colors" onclick="openArticleModal(${item.id})">${item.title}</h3>
+                            <h3 class="text-lg font-bold text-gray-900 mb-1 hover:text-primary-600 cursor-pointer transition-colors" onclick="openLiteraryWorkModal(${item.id})">${item.title}</h3>
                             <p class="text-gray-600 text-sm line-clamp-2">${item.desc}</p>
                             <p class="text-xs text-gray-500 mt-3 font-medium">By ${item.author} &bull; ${item.date}</p>
                         </div>
-                        <button onclick="openArticleModal(${item.id})" class="w-full sm:w-auto px-4 py-2 border border-primary-200 text-primary-700 rounded-lg hover:bg-primary-50 transition font-medium text-sm flex items-center justify-center gap-2 whitespace-nowrap group">
-                            Read Article <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        <button onclick="openLiteraryWorkModal(${item.id})" class="w-full sm:w-auto px-4 py-2 border border-primary-200 text-primary-700 rounded-lg hover:bg-primary-50 transition font-medium text-sm flex items-center justify-center gap-2 whitespace-nowrap group">
+                            Read Work <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                         </button>
                     </div>
                 `;
@@ -552,7 +528,7 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
             let contentElement;
             switch(state.activeTab) {
                 case 'news': contentElement = renderNews(); break;
-                case 'articles': contentElement = renderArticles(); break;
+                case 'literary_works': contentElement = renderLiteraryWorks(); break;
                 case 'magazines': contentElement = renderMagazines(); break;
                 case 'library': contentElement = renderLibrary(); break;
             }
@@ -691,41 +667,41 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
             }, 300);
         }
 
-        // --- Article Details Modal Logic ---
-        const articleModal = document.getElementById('article-modal');
-        const articleModalContent = document.getElementById('article-modal-content');
-        const articleModalBody = document.getElementById('article-modal-body');
+        // --- Literary Works Details Modal Logic ---
+        const literaryWorkModal = document.getElementById('literary-work-modal');
+        const literaryWorkModalContent = document.getElementById('literary-work-modal-content');
+        const literaryWorkModalBody = document.getElementById('literary-work-modal-body');
 
-        function openArticleModal(id) {
-            const article = state.data.articles.find(a => a.id === id);
-            if(!article) return;
+        function openLiteraryWorkModal(id) {
+            const work = state.data.literary_works.find(a => a.id === id);
+            if(!work) return;
 
-            articleModalBody.innerHTML = `
+            literaryWorkModalBody.innerHTML = `
                 <div class="mb-6">
                     <div class="flex items-center gap-2 mb-4">
-                        <span class="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-primary-100">${article.category}</span>
-                        <span class="text-gray-500 text-sm font-medium"><i class="far fa-clock mr-1"></i> ${article.readTime}</span>
+                        <span class="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-primary-100">${work.category}</span>
+                        <span class="text-gray-500 text-sm font-medium"><i class="far fa-clock mr-1"></i> ${work.readTime}</span>
                     </div>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">${article.title}</h2>
-                    <p class="text-sm text-gray-500 font-medium border-b border-gray-100 pb-6"><i class="fas fa-user-edit mr-2 text-gray-400"></i>By ${article.author} &nbsp;&bull;&nbsp; <i class="far fa-calendar-alt mx-1 text-gray-400"></i>${article.date}</p>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">${work.title}</h2>
+                    <p class="text-sm text-gray-500 font-medium border-b border-gray-100 pb-6"><i class="fas fa-user-edit mr-2 text-gray-400"></i>By ${work.author} &nbsp;&bull;&nbsp; <i class="far fa-calendar-alt mx-1 text-gray-400"></i>${work.date}</p>
                 </div>
                 <div class="text-gray-800 leading-relaxed text-base sm:text-lg whitespace-pre-line">
-                    ${article.desc}
+                    ${work.desc}
                 </div>
             `;
 
-            articleModal.classList.remove('hidden');
+            literaryWorkModal.classList.remove('hidden');
             setTimeout(() => {
-                articleModalContent.classList.remove('scale-95', 'opacity-0');
-                articleModalContent.classList.add('scale-100', 'opacity-100');
+                literaryWorkModalContent.classList.remove('scale-95', 'opacity-0');
+                literaryWorkModalContent.classList.add('scale-100', 'opacity-100');
             }, 10);
         }
 
-        function closeArticleModal() {
-            articleModalContent.classList.remove('scale-100', 'opacity-100');
-            articleModalContent.classList.add('scale-95', 'opacity-0');
+        function closeLiteraryWorkModal() {
+            literaryWorkModalContent.classList.remove('scale-100', 'opacity-100');
+            literaryWorkModalContent.classList.add('scale-95', 'opacity-0');
             setTimeout(() => {
-                articleModal.classList.add('hidden');
+                literaryWorkModal.classList.add('hidden');
             }, 300);
         }
 
@@ -806,10 +782,10 @@ For Indian viewers, World Cup matches can be watched on Zee's sports channels an
                 newItem.color = "text-secondary";
                 newItem.bg = "bg-green-50";
                 state.data.news.unshift(newItem); // Add to beginning
-            } else if (type === 'articles') {
+            } else if (type === 'literary_works') {
                 newItem.readTime = "1 min read";
                 newItem.category = "New Contribution";
-                state.data.articles.unshift(newItem);
+                state.data.literary_works.unshift(newItem);
             } else if (type === 'magazines') {
                 newItem.issue = "New Release";
                 newItem.cover = `https://placehold.co/500x500/1e293b/ffffff?text=${encodeURIComponent(title.substring(0,10))}`;
