@@ -4,23 +4,15 @@ const state = {
     activeLibraryCategory: 'All', // Added category state
     data: {
         news: [
-            { id: 1, title: "📰 യൂണിറ്റിൽ   ലൈബ്രെറിക്ക് തുടക്കം ", author: "arqam corner", date: "june 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു .ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു.വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു.സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു.ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു.ലൈബ്രെറിയിൽ ഏതൊക്കെ പുസ്തകങ്ങൾ ഉണ്ടെന്ന് ലൈവായി arqamiz ൽ ലഭിക്കും  ", color: "text-yellow-500", bg: "bg-yellow-50", image: "https://i.pinimg.com/736x/ae/38/0d/ae380d5f51bbb4ef58edcab2614b713f.jpg" },
-           
-      literaryworks: [
-            { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.
-
-ഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.
-
-ഇസ്ലാമിന്റെ അഞ്ച് അടിസ്ഥാന തൂണുകൾ ഷഹാദത്ത് (വിശ്വാസപ്രഖ്യാപനം), നമസ്കാരം, സകാത്ത്, റമദാൻ നോമ്പ്, ഹജ്ജ് എന്നിവയാണ്. ഈ കർമ്മങ്ങൾ മുസ്ലിംകളുടെ ആത്മീയ വളർച്ചയ്ക്കും സാമൂഹിക ഉത്തരവാദിത്തബോധത്തിനും സഹായിക്കുന്നു.
-
-ലോകമെമ്പാടുമുള്ള കോടിക്കണക്കിന് ആളുകൾ ഇസ്ലാം മതം പിന്തുടരുന്നു. സമാധാനവും ധാർമ്മികതയും മനുഷ്യസ്നേഹവും പ്രോത്സാഹിപ്പിക്കുന്ന മതമാണ് ഇസ്ലാം. മനുഷ്യരുടെ ഈ ലോകജീവിതവും പരലോക വിജയവും ലക്ഷ്യമാക്കി ഒരു സമഗ്ര ജീവിത മാർഗ്ഗമാണ് ഇസ്ലാം.
-
-ഉപസംഹാരം:
-സത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics" }
+            { id: 1, title: "📰 യൂണിറ്റിൽ ലൈബ്രെറിക്ക് തുടക്കം", author: "Arqam corner", date: "June 19, 2026", desc: "ജൂൺ 19 വായനാദിനവുമായി ബന്ധപ്പെട്ട് arqam unit ക്ലാസ്സിൽ ഒരു ലൈബ്രെറിക്ക് തുടക്കം കുറിച്ചു. ഉൽഘടനം hida സെക്രട്ടറി മിസ്ബാഹ് ഒറ്റപ്പാലം നിർവഹിച്ചു. വായനയുടെ ഗുണങ്ങളെപറ്റിയും അതിന്റെ പ്രാധാന്യങ്ങളും വിദ്യാർത്ഥികൾക്ക് വിവരിച്ചുകൊടുത്തു. സാനിദ്യം അറിയിക്കാൻ uc മുബഷിർ കുഞ്ഞിപ്പള്ളിയും പങ്കെടുത്തു. ശാമിൽ കൊട്ടോത് സ്വാഗതവും ശാദി ഫർഹാൻ നന്ദിയും പറഞ്ഞു. ലൈബ്രെറിയിൽ ഏതൊക്കെ പുസ്തകങ്ങൾ ഉണ്ടെന്ന് ലൈവായി arqamiz ൽ ലഭിക്കും.",  color: "text-yellow-500", bg: "bg-yellow-50", image: "https://i.pinimg.com/736x/ae/38/0d/ae380d5f51bbb4ef58edcab2614b713f.jpg" },
+            
+        ],
+        literary_works: [
+            { id: 1, title: "ഇസ്ലാമിന്റെ സന്ദേശവും മൂല്യങ്ങളും", author: "amenn cheruveri", date: "May 28, 2026", desc: `ഇസ്ലാം ലോകത്തിലെ പ്രധാന മതങ്ങളിൽ ഒന്നാണ്. ഇസ്ലാം എന്ന പദത്തിന് സമർപ്പണം, സമാധാനം എന്നിങ്ങനെ അർത്ഥങ്ങളുണ്ട്. അല്ലാഹുവിന് പൂർണ്ണമായി കീഴടങ്ങി ജീവിക്കുന്ന ജീവിതരീതിയാണ് ഇസ്ലാം പഠിപ്പിക്കുന്നത്. പ്രവാചകൻ മുഹമ്മദ് നബി (സ) ആണ് ഇസ്ലാമിന്റെ അവസാന ദൂതൻ. വിശുദ്ധ ഖുർആൻ ഇസ്ലാമിന്റെ പ്രധാന ഗ്രന്ഥമാണ്.\n\nഇസ്ലാം മനുഷ്യരെ സത്യസന്ധത, നീതി, കരുണ, സഹോദരത്വം എന്നിവ പാലിക്കാൻ പ്രേരിപ്പിക്കുന്നു. എല്ലാ മനുഷ്യരും തുല്യരാണെന്നും ജാതി, വർഗം, ഭാഷ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ വിവേചനം പാടില്ലെന്നും ഇസ്ലാം പഠിപ്പിക്കുന്നു. ദരിദ്രരെയും അനാഥരെയും സഹായിക്കാനും സമൂഹത്തിൽ സമാധാനവും സൗഹാർദ്ദവും നിലനിർത്താനും ഇസ്ലാം പ്രാധാന്യം നൽകുന്നു.\n\nഇസ്ലാമിന്റെ അഞ്ച് അടിസ്ഥാന തൂണുകൾ ഷഹാദത്ത് (വിശ്വാസപ്രഖ്യാപനം), നമസ്കാരം, സകാത്ത്, റമദാൻ നോമ്പ്, ഹജ്ജ് എന്നിവയാണ്. ഈ കർമ്മങ്ങൾ മുസ്ലിംകളുടെ ആത്മീയ വളർച്ചയ്ക്കും സാമൂഹിക ഉത്തരവാദിത്തബോധത്തിനും സഹായിക്കുന്നു.\n\nലോകമെമ്പാടുമുള്ള കോടിക്കണക്കിന് ആളുകൾ ഇസ്ലാം മതം പിന്തുടരുന്നു. സമാധാനവും ധാർമ്മികതയും മനുഷ്യസ്നേഹവും പ്രോത്സാഹിപ്പിക്കുന്ന മതമാണ് ഇസ്ലാം. മനുഷ്യരുടെ ഈ ലോകജീവിതവും പരലോക വിജയവും ലക്ഷ്യമാക്കി ഒരു സമഗ്ര ജീവിത മാർഗ്ഗമാണ് ഇസ്ലാം.\n\nഉപസംഹാരം:\nസത്യവും നീതിയും കരുണയും അടിസ്ഥാനമാക്കിയുള്ള ജീവിതം നയിക്കാൻ മനുഷ്യരെ പ്രേരിപ്പിക്കുന്ന മഹത്തായ മതമാണ് ഇസ്ലാം. സമൂഹത്തിൽ സമാധാനവും ഐക്യവും വളർത്തുന്നതിൽ ഇസ്ലാമിന്റെ ഉപദേശങ്ങൾ വലിയ പങ്കുവഹിക്കുന്നു.`, readTime: "5 min read", category: "Academics", image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80" }
         ],
         magazines: [
-            { id: 1, title: "ഓർബിസ് ", author: "Arqam unit", issue: "sep 2025", cover: "https://i.pinimg.com/736x/8b/2a/64/8b2a640d8d4e7f1691ce2540cc16b9d0.jpg", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
-            { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "blob:https://in.pinterest.com/23008812-a5a4-4245-8a70-6ef335ef32a5", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
+            { id: 1, title: "ഓർബിസ്", author: "Arqam unit", issue: "sep 2025", cover: "https://i.pinimg.com/736x/8b/2a/64/8b2a640d8d4e7f1691ce2540cc16b9d0.jpg", pdf: "https://drive.google.com/file/d/1WhHaNRtGC-TjLGDjvm3nSjPedEH8Kawm/view?usp=drive_link" },
+            { id: 2, title: "إقرأ", author: "Arqam unit", issue: "feb 2026", cover: "https://i.pinimg.com/736x/c7/b4/f1/c7b4f127c878b5096c598817e3e3e369.jpg", pdf: "https://drive.google.com/file/d/1nNBgnbNlJeF59SLFYZFo1rhb-UKrzDJK/view?usp=drive_link" },
         ],
         library: [
             { id: 1, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", category: "Non-Fiction", review: "An enthralling and thought-provoking look at the history of our species.", cover: "https://drive.google.com/file/d/1R6SWnQ0rxWh7w4N41mbigZXE90Vab9mP/view?usp=sharing" },
@@ -32,7 +24,7 @@ const state = {
             { id: 7, title: "The Great Gatsby", author: "F. Scott Fitzgerald", category: "Novel", review: "A tragic story of the Jazz Age and the American Dream.", cover: "https://placehold.co/500x500/f59e0b/ffffff?text=Great+Gatsby" },
             { id: 8, title: "Aesop's Fables", author: "Aesop", category: "Story", review: "A timeless collection of moral tales and fables.", cover: "https://placehold.co/500x500/3b82f6/ffffff?text=Aesop's+Fables" },
             { id: 9, title: "The Diary of a Young Girl", author: "Anne Frank", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
-            { id: 10,title: "hksdfkwyugkufyfgfyef",  author: "ameen", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
+            { id: 10, title: "hksdfkwyugkufyfgfyef",  author: "ameen", category: "Autobiography", review: "The poignant and powerful diary of a young Jewish girl during WWII.", cover: "https://placehold.co/500x500/ec4899/ffffff?text=Anne+Frank" },
             { id: 11, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Novel", review: "A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice.", cover: "https://placehold.co/500x500/3b82f6/ffffff?text=Mockingbird" },
             { id: 12, title: "Thinking, Fast and Slow", author: "Daniel Kahneman", category: "Non-Fiction", review: "The renowned psychologist's explanation of the two systems that drive the way we think.", cover: "https://placehold.co/500x500/10b981/ffffff?text=Thinking" },
             { id: 13, title: "Deep Work", author: "Cal Newport", category: "Study", review: "Rules for focused success in a distracted world.", cover: "https://placehold.co/500x500/6366f1/ffffff?text=Deep+Work" },
@@ -57,6 +49,7 @@ const state = {
         ]
     }
 };
+
 
 // --- Rendering Logic ---
 function renderNews() {
@@ -95,29 +88,32 @@ function renderNews() {
     return container;
 }
 
-function renderArticles() {
+function renderLiteraryWorks() {
     const container = document.createElement('div');
     container.className = 'flex flex-col gap-4 fade-in';
     
-    if(state.data.articles.length === 0) {
-        container.innerHTML = `<div class="text-center py-12 text-gray-500">No articles available.</div>`;
+    if(state.data.literary_works.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 text-gray-500">No literary works available.</div>`;
         return container;
     }
 
-    state.data.articles.forEach(item => {
+    state.data.literary_works.forEach(item => {
+        const imageHtml = item.image ? `<img src="${item.image}" alt="${item.title}" class="w-full sm:w-40 sm:h-32 object-cover rounded-lg flex-shrink-0 shadow-sm border border-gray-100">` : '';
+
         container.innerHTML += `
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 hover:shadow-md transition-shadow flex flex-col sm:flex-row gap-5 items-start sm:items-center">
-                <div class="flex-grow">
+                ${imageHtml}
+                <div class="flex-grow w-full">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-2.5 py-0.5 rounded">${item.category}</span>
                         <span class="text-gray-400 text-xs"><i class="far fa-clock"></i> ${item.readTime}</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1 hover:text-primary-600 cursor-pointer transition-colors" onclick="openArticleModal(${item.id})">${item.title}</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1 hover:text-primary-600 cursor-pointer transition-colors" onclick="openLiteraryWorkModal(${item.id})">${item.title}</h3>
                     <p class="text-gray-600 text-sm line-clamp-2">${item.desc}</p>
                     <p class="text-xs text-gray-500 mt-3 font-medium">By ${item.author} &bull; ${item.date}</p>
                 </div>
-                <button onclick="openArticleModal(${item.id})" class="w-full sm:w-auto px-4 py-2 border border-primary-200 text-primary-700 rounded-lg hover:bg-primary-50 transition font-medium text-sm flex items-center justify-center gap-2 whitespace-nowrap group">
-                    Read Article <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                <button onclick="openLiteraryWorkModal(${item.id})" class="w-full sm:w-auto px-4 py-2 border border-primary-200 text-primary-700 rounded-lg hover:bg-primary-50 transition font-medium text-sm flex items-center justify-center gap-2 whitespace-nowrap group flex-shrink-0">
+                    Read Work <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                 </button>
             </div>
         `;
@@ -223,7 +219,7 @@ function renderContent() {
     let contentElement;
     switch(state.activeTab) {
         case 'news': contentElement = renderNews(); break;
-        case 'articles': contentElement = renderArticles(); break;
+        case 'literary_works': contentElement = renderLiteraryWorks(); break;
         case 'magazines': contentElement = renderMagazines(); break;
         case 'library': contentElement = renderLibrary(); break;
     }
@@ -362,41 +358,44 @@ function closeNewsModal() {
     }, 300);
 }
 
-// --- Article Details Modal Logic ---
-const articleModal = document.getElementById('article-modal');
-const articleModalContent = document.getElementById('article-modal-content');
-const articleModalBody = document.getElementById('article-modal-body');
+// --- Literary Works Details Modal Logic ---
+const literaryWorkModal = document.getElementById('literary-work-modal');
+const literaryWorkModalContent = document.getElementById('literary-work-modal-content');
+const literaryWorkModalBody = document.getElementById('literary-work-modal-body');
 
-function openArticleModal(id) {
-    const article = state.data.articles.find(a => a.id === id);
-    if(!article) return;
+function openLiteraryWorkModal(id) {
+    const work = state.data.literary_works.find(a => a.id === id);
+    if(!work) return;
 
-    articleModalBody.innerHTML = `
+    const imageHtml = work.image ? `<img src="${work.image}" alt="${work.title}" class="w-full h-64 sm:h-80 object-cover rounded-xl mb-6 shadow-sm border border-gray-100">` : '';
+
+    literaryWorkModalBody.innerHTML = `
         <div class="mb-6">
             <div class="flex items-center gap-2 mb-4">
-                <span class="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-primary-100">${article.category}</span>
-                <span class="text-gray-500 text-sm font-medium"><i class="far fa-clock mr-1"></i> ${article.readTime}</span>
+                <span class="bg-primary-50 text-primary-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-primary-100">${work.category}</span>
+                <span class="text-gray-500 text-sm font-medium"><i class="far fa-clock mr-1"></i> ${work.readTime}</span>
             </div>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">${article.title}</h2>
-            <p class="text-sm text-gray-500 font-medium border-b border-gray-100 pb-6"><i class="fas fa-user-edit mr-2 text-gray-400"></i>By ${article.author} &nbsp;&bull;&nbsp; <i class="far fa-calendar-alt mx-1 text-gray-400"></i>${article.date}</p>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">${work.title}</h2>
+            <p class="text-sm text-gray-500 font-medium border-b border-gray-100 pb-6"><i class="fas fa-user-edit mr-2 text-gray-400"></i>By ${work.author} &nbsp;&bull;&nbsp; <i class="far fa-calendar-alt mx-1 text-gray-400"></i>${work.date}</p>
         </div>
+        ${imageHtml}
         <div class="text-gray-800 leading-relaxed text-base sm:text-lg whitespace-pre-line">
-            ${article.desc}
+            ${work.desc}
         </div>
     `;
 
-    articleModal.classList.remove('hidden');
+    literaryWorkModal.classList.remove('hidden');
     setTimeout(() => {
-        articleModalContent.classList.remove('scale-95', 'opacity-0');
-        articleModalContent.classList.add('scale-100', 'opacity-100');
+        literaryWorkModalContent.classList.remove('scale-95', 'opacity-0');
+        literaryWorkModalContent.classList.add('scale-100', 'opacity-100');
     }, 10);
 }
 
-function closeArticleModal() {
-    articleModalContent.classList.remove('scale-100', 'opacity-100');
-    articleModalContent.classList.add('scale-95', 'opacity-0');
+function closeLiteraryWorkModal() {
+    literaryWorkModalContent.classList.remove('scale-100', 'opacity-100');
+    literaryWorkModalContent.classList.add('scale-95', 'opacity-0');
     setTimeout(() => {
-        articleModal.classList.add('hidden');
+        literaryWorkModal.classList.add('hidden');
     }, 300);
 }
 
@@ -477,10 +476,11 @@ function handleUpload(event) {
         newItem.color = "text-secondary";
         newItem.bg = "bg-green-50";
         state.data.news.unshift(newItem); // Add to beginning
-    } else if (type === 'articles') {
+    } else if (type === 'literary_works') {
         newItem.readTime = "1 min read";
         newItem.category = "New Contribution";
-        state.data.articles.unshift(newItem);
+        newItem.image = `https://placehold.co/800x500/10b981/ffffff?text=${encodeURIComponent(title.substring(0,10))}`;
+        state.data.literary_works.unshift(newItem);
     } else if (type === 'magazines') {
         newItem.issue = "New Release";
         newItem.cover = `https://placehold.co/500x500/1e293b/ffffff?text=${encodeURIComponent(title.substring(0,10))}`;
