@@ -95,9 +95,30 @@
             transition: all 0.2s ease-in-out;
         }
         
-        /* Custom Gradient Background with added shades */
+        /* Custom Image Background */
         .bg-custom-shades {
-            background: linear-gradient(135deg, #eff6ff, #dbeafe, #bfdbfe);
+            background-image: url('https://i.pinimg.com/736x/98/aa/02/98aa02348a1aab9bbd565fd4fef8543c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Falling Stars Animation */
+        .star {
+            position: fixed;
+            top: -10px;
+            z-index: 9999;
+            color: #fff;
+            pointer-events: none;
+            animation: fall linear forwards;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
         }
     </style>
 </head>
@@ -112,8 +133,9 @@
                     <button onclick="toggleMobileMenu()" class="sm:hidden mr-3 text-gray-600 hover:text-primary-600 transition-colors focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
-                    <!-- Logo (Text Only) -->
-                    <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="switchTab('news')">
+                    <!-- Logo and Title -->
+                    <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="switchTab('news')">
+                        <img src="https://i.pinimg.com/736x/80/49/f5/8049f58fa29b10f321d4e4365d6a63eb.jpg" alt="Arqamize Logo" class="h-10 w-auto rounded-md shadow-sm border border-gray-100 object-contain">
                         <h2 class="text-2xl font-extrabold text-primary-900 tracking-tight">ArQamize</h2>
                     </div>
                 </div>
@@ -121,24 +143,67 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative text-white py-20 md:py-28 overflow-hidden shadow-inner">
-        <!-- Background Image with Light to Dark Gradient Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80" alt="Library Background" class="w-full h-full object-cover object-center" />
-            <!-- The Gradient: Light blue/transparent top-left to dark navy bottom-right -->
-            <div class="absolute inset-0 bg-gradient-to-br from-primary-600/40 via-primary-900/80 to-dark/95"></div>
-        </div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
-            <div class="text-center w-full">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-                    Dive into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary">ArQamize</span>
-                </h1>
-                <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-10 font-light drop-shadow-md">
-                    ARQAM is a student development unit that enhances students' skills through learning and knowledge-sharing activities. It provides access to literary works, magazines, library resources, and news updates, helping students grow academically and stay informed.
-                </p>
+    <!-- Hero Section Carousel -->
+    <header class="relative text-white overflow-hidden shadow-inner group">
+        <!-- Carousel Container -->
+        <div id="hero-carousel" class="flex w-full transition-transform duration-500 ease-in-out h-full">
+            
+            <!-- Slide 1: ArQamize -->
+            <div class="w-full flex-shrink-0 relative flex items-center justify-center py-20 md:py-28">
+                <!-- Background Image with Light to Dark Gradient Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1920&q=80" alt="Library Background" class="w-full h-full object-cover object-center" />
+                    <!-- The Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-600/40 via-primary-900/80 to-dark/95"></div>
+                </div>
+                
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+                    <div class="text-center w-full">
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
+                            Dive into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-secondary">ArQamize</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light drop-shadow-md">
+                            ARQAM is a student development unit that enhances students' skills through learning and knowledge-sharing activities. It provides access to literary works, magazines, library resources, and news updates, helping students grow academically and stay informed.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Slide 2: Blessed Rabi' -->
+            <div class="w-full flex-shrink-0 relative flex items-center justify-center py-20 md:py-28">
+                <!-- Background Image with Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://i.pinimg.com/1200x/b2/de/7f/b2de7f9963a64a2b0898bb36f3180f99.jpg" alt="About Rabeeh Background" class="w-full h-full object-cover object-center" />
+                    <!-- Gradient overlay to ensure text is readable -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary-700/60 via-dark/80 to-black/90"></div>
+                </div>
+                
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+                    <div class="text-center w-full">
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight drop-shadow-lg text-luxor">
+                            Blessed Rabi'
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md leading-relaxed">
+                            Rabi' al-Awwal is a blessed and beautiful month in the Islamic calendar, remembered with great love and respect by Muslims around the world. It is especially significant because Prophet Muhammad ﷺ was born in this month in Makkah. His birth brought a radiant light of mercy, guidance, and hope to humanity. Rabi' al-Awwal reminds us of the noble life, beautiful character, kindness, patience, and teachings of the Prophet ﷺ. It is a time to remember his love for humanity and to follow his example by spreading peace, compassion, and goodness in our lives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Navigation Arrows -->
+        <button onclick="prevSlide()" class="absolute left-2 md:left-6 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20 focus:outline-none backdrop-blur-sm border border-white/20">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-2 md:right-6 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20 focus:outline-none backdrop-blur-sm border border-white/20">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
+            <button class="indicator w-2.5 h-2.5 rounded-full bg-white transition-all shadow-sm" onclick="goToSlide(0)"></button>
+            <button class="indicator w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white/80 transition-all shadow-sm" onclick="goToSlide(1)"></button>
         </div>
     </header>
 
@@ -574,7 +639,6 @@
             return wrapper;
         }
 
-        
         // --- Core Interactions ---
         function renderContent() {
             const container = document.getElementById('content-container');
@@ -867,7 +931,138 @@
         // Initialize App on load
         window.onload = () => {
             renderContent();
+            createStars(); // Start the falling stars
+            
+            // Stop the stars after 30 seconds
+            setTimeout(() => {
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(star => {
+                    // Let the current animation finish, then prevent respawning
+                    star.style.animationPlayState = 'running'; // Ensure they are running
+                    // Remove the event listener that respawns the star
+                    const newStar = star.cloneNode(true);
+                    star.parentNode.replaceChild(newStar, star);
+                    // Add a new event listener that just removes the star when it finishes
+                    newStar.addEventListener('animationend', () => {
+                        newStar.remove();
+                    });
+                });
+                
+                // Clear any existing stars that might be mid-animation if we want an immediate stop
+                // Alternatively, the code above lets them fall off the screen gracefully.
+            }, 30000); // 30,000 milliseconds = 30 seconds
         };
+
+        // --- Carousel Logic ---
+        let currentSlide = 0;
+        const totalSlides = 2; // ArQamize and About Rabeeh
+        let slideInterval;
+
+        function updateCarousel() {
+            const carousel = document.getElementById('hero-carousel');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            if(carousel) {
+                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            if(indicators.length > 0) {
+                indicators.forEach((ind, index) => {
+                    if(index === currentSlide) {
+                        ind.classList.remove('bg-white/50', 'hover:bg-white/80');
+                        ind.classList.add('bg-white');
+                    } else {
+                        ind.classList.remove('bg-white');
+                        ind.classList.add('bg-white/50', 'hover:bg-white/80');
+                    }
+                });
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+            resetInterval();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+            resetInterval();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 6000); // Auto-slide every 6 seconds
+        }
+
+        // Initialize Carousel auto-sliding
+        setTimeout(resetInterval, 1000);
+
+        // Touch swipe support for Mobile Carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const heroHeader = document.querySelector('header');
+        
+        if (heroHeader) {
+            heroHeader.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+                clearInterval(slideInterval); // Pause sliding on touch
+            }, {passive: true});
+
+            heroHeader.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                resetInterval(); // Resume sliding
+            }, {passive: true});
+        }
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide(); // Swipe left to go next
+            if (touchEndX > touchStartX + 50) prevSlide(); // Swipe right to go prev
+        }
+
+        // --- Falling Stars Logic ---
+        function createStars() {
+            const numStars = 50; // Number of stars on screen at once
+            const body = document.body;
+
+            for (let i = 0; i < numStars; i++) {
+                spawnStar(body);
+            }
+        }
+
+        function spawnStar(container) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.innerHTML = '★'; // You can change this to ⋆, ✧, or a tiny SVG
+
+            // Randomize position across the ENTIRE width of the screen
+            const startPosX = Math.random() * window.innerWidth;
+            const size = Math.random() * 10 + 5; // 5px to 15px
+            const duration = Math.random() * 5 + 5; // 5s to 10s
+            const delay = Math.random() * 5; // Start at different times
+
+            star.style.left = `${startPosX}px`;
+            star.style.fontSize = `${size}px`;
+            star.style.animationDuration = `${duration}s`;
+            star.style.animationDelay = `${delay}s`;
+
+            container.appendChild(star);
+
+            // Re-spawn the star when its animation finishes to keep them falling continuously
+            // We use a named function so we can remove it later if needed, though the replacement method above works too.
+            star.addEventListener('animationend', function respawn() {
+                star.remove();
+                spawnStar(container);
+            });
+        }
 
     </script>
 </body>
